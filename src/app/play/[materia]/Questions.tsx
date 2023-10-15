@@ -27,12 +27,12 @@ export default function Questions({ data }: {data: IQuestion}) {
         }, [playeds])
     return (
         <main className=" h-screen flex flex-col w-screen relative items-center p-8 justify-center">
-            {submited && <Link onClick={() => setNavBarActive(true)} href={'/play/'} className=" absolute cursor-pointer text-2xl top-4 left-12 bg-zinc-400 p-3 rounded-full">
+            {submited && <Link onClick={() => setNavBarActive(true)} href={'/play/'} className=" absolute cursor-pointer text-2xl top-8 max-md:left-4 md:left-12 bg-zinc-400 p-3 rounded-full">
                 <BiArrowBack />
             </Link>}
             {!submited && <p className=" absolute text-2xl top-4 right-12 bg-zinc-400 p-3 rounded-full">{time}</p>}
             <small className=" opacity-40">{data.type}</small>
-            <h1 className=" text-4xl w-10/12 text-center">{data.body}</h1>
+            <h1 className=" text-4xl max-md:text-3xl w-10/12 text-center">{data.body}</h1>
             <ul className=" flex flex-col gap-4 mt-4">
             {/* @ts-ignore */}
             {JSON.parse(data.answers).map((answer: Answer) => (
@@ -52,7 +52,7 @@ export default function Questions({ data }: {data: IQuestion}) {
                                 quantity: pontuation
                             }).then(res => console.log(res.data)).catch(err => console.log(err))
                         }
-                    }} style={{width: '600px', background: submited ? answer.isCorrect ? 'green' : 'red' : ''}}>
+                    }} style={{width: '600px',maxWidth: '80vw', background: submited ? answer.isCorrect ? 'green' : 'red' : ''}}>
                         {answer.body}
                     </Button>
                 </li>

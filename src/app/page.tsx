@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <main className=' w-full bg-social bg-math bg-nature bg-others h-screen flex flex-col gap-4 items-center justify-center bg-gradient-to-br from-gray-700 via-black to-black'>
-        <h1 className=' text-4xl font-semibold'>Faça login para jogar o jogo!</h1>
+        <h1 className=' text-4xl font-semibold text-center max-md:text-3xl'>Faça login para jogar o jogo!</h1>
         <div className=' animate-[slideLeft_0.6s_ease-in-out]'>
           <LoginForm />
         </div>

@@ -6,7 +6,7 @@ export default function PlayLayout({ children }: children) {
     return (
         <>
         <SideBar />
-        <div className=' pr-36'>
+        <div className=' md:pr-36 max-md:pt-20'>
             {children}
         </div>
         </>

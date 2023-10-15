@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:6220/'
+export const API_URL = 'https://wq8hlk-6220.csb.app/'
 export const LOCAL_STORAGE = {
     USER_CACHE: '$_USER_'
 }
